@@ -32,7 +32,8 @@ events = []
 while True:
     print("1. Add new event")
     print("2. Print entire calendar")
-    print("3. Delete an event")
+    print("3. Change an event")
+    print("4. Delete an event")
     i = input("Choose an option: ")
 
     if i == 'quit':
@@ -89,10 +90,10 @@ while True:
         print_calendar()
         i = int(input("What event number would you like to delete? "))
         i -= 1
-        if i < 0 or i > len(events):
+        if i > 0 and i < len(events):
+            del events[i]
+        else:
             print("Invalid event. Try again")
-            continue
-        del events[i]
 
     else:
         print("That is not an option. Try again")

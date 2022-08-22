@@ -1,4 +1,13 @@
 #----- PIGGY BANK (EASY) -----#
+accFlag = 1
+while accFlag == 1:
+    acct = str(input("Enter 10 digit account number: "))
+    if len(acct) != 10:
+        print("Invalid account number")
+    elif not acct.isnumeric():
+        print("Invalid account number")
+    else:
+        accFlag = 0
 
 total = 0
 

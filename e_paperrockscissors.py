@@ -21,10 +21,6 @@ while True:
         print("YOU LOSE")
         break
 
-    print("Computer:", compScore)
-    print("Player:", plrScore)
-    print("-----------------------")
-
     if comp == 'p':
         if plr.lower() == 'p':
             print("Draw")
@@ -52,3 +48,7 @@ while True:
             print("Point to Player")
         elif plr.lower() == 's':
             print("Draw")
+
+    print("Computer:", compScore)
+    print("Player:", plrScore)
+    print("-----------------------")

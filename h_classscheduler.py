@@ -14,21 +14,28 @@ class Student:
         del self.sched[i]
         del self.grades[i]
 
-    def print_sched(self):
+    def print(self):
         print("Student:", self.name)
         for i in range(0, len(self.sched)):
             print(i+1, ":", self.sched[i], "Grade: ", self.grades[i])
 
-#def print_student()
+def print_students():
+    print("------------------")
+    for i in range(0, len(students)):
+        print("Event", i+1)
+        students[i].print()
+        print()
+    print("------------------")
 
 students = []
 
 while True:
     print("1. Add new student")
-    print("2. Update schedule")
+    print("2. Add schedule")
     print("3. Drop class")
     print("4. Print schedule")
     print("5. Remove student")
+    print("6. Print all students")
     option = input("Choose an option: ")
 
     if option == 'quit':
